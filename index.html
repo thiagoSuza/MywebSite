@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Charlotte Cat Games</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #0b1020;
+      color: #f5f7ff;
+      line-height: 1.6;
+    }
+
+    a {
+      color: #8ecbff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    header {
+      min-height: 85vh;
+      display: flex;
+      align-items: center;
+      background:
+        linear-gradient(rgba(5, 10, 20, 0.75), rgba(5, 10, 20, 0.9)),
+        url("banner.jpg") center/cover no-repeat;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .hero {
+      padding: 60px 0;
+      max-width: 700px;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 12px;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      color: #d3dcf7;
+      margin-bottom: 14px;
+    }
+
+    .tagline {
+      font-size: 1rem;
+      color: #9fb3e8;
+      margin-bottom: 28px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 18px;
+      border-radius: 10px;
+      background: #2563eb;
+      color: white;
+      font-weight: bold;
+      transition: 0.2s ease;
+    }
+
+    .btn:hover {
+      background: #1d4ed8;
+      text-decoration: none;
+    }
+
+    .btn.secondary {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .btn.secondary:hover {
+      background: rgba(255, 255, 255, 0.14);
+    }
+
+    section {
+      padding: 70px 0;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .section-text {
+      max-width: 760px;
+      color: #cdd6f4;
+      margin-bottom: 30px;
+    }
+
+    .featured-game {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .featured-game img {
+      width: 100%;
+      border-radius: 18px;
+      display: block;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 24px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 18px;
+      overflow: hidden;
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .card-content {
+      padding: 18px;
+    }
+
+    .card h3 {
+      margin-bottom: 8px;
+      font-size: 1.2rem;
+    }
+
+    .card p {
+      color: #cdd6f4;
+      margin-bottom: 12px;
+      font-size: 0.95rem;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 6px 10px;
+      font-size: 0.85rem;
+      border-radius: 999px;
+      background: rgba(37, 99, 235, 0.2);
+      color: #b7d3ff;
+      margin-bottom: 14px;
+    }
+
+    .tech-list,
+    .links-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .tech-item,
+    .link-item {
+      padding: 10px 14px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    footer {
+      padding: 40px 0 60px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      color: #aeb9dc;
+    }
+
+    @media (max-width: 800px) {
+      .hero h1 {
+        font-size: 2.3rem;
+      }
+
+      .featured-game {
+        grid-template-columns: 1fr;
+      }
+
+      header {
+        min-height: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <div class="hero">
+        <h1>Charlotte Cat Games</h1>
+        <p>Independent Unity Game Development Studio</p>
+        <div class="tagline">
+          2D and 3D games for Desktop, Android and WebGL<br>
+          Online multiplayer experiences with Photon PUN2
+        </div>
+
+        <div class="buttons">
+          <a class="btn" href="#projects">View Projects</a>
+          <a class="btn secondary" href="https://store.steampowered.com/app/2248670/MARTIAN_CONQUER/" target="_blank">Steam</a>
+          <a class="btn secondary" href="https://play.google.com/store/apps/developer?id=Thiago+correia+de+Souza" target="_blank">Google Play</a>
+          <a class="btn secondary" href="https://charlottecatgames.itch.io/" target="_blank">itch.io</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section>
+    <div class="container">
+      <h2>Featured Game</h2>
+      <div class="featured-game">
+        <img src="martian-conquer.jpg" alt="Martian Conquer">
+        <div>
+          <h3>Martian Conquer</h3>
+          <p class="section-text">
+            Commercial game developed by Charlotte Cat Games and released on Steam.
+          </p>
+          <a class="btn" href="https://store.steampowered.com/app/2248670/MARTIAN_CONQUER/" target="_blank">View on Steam</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="container">
+      <h2>Projects</h2>
+      <p class="section-text">
+        A selection of prototypes, experiments and published projects developed with Unity.
+      </p>
+
+      <div class="card-grid">
+        <div class="card">
+          <img src="tanks.jpg" alt="Tanks">
+          <div class="card-content">
+            <h3>Tanks</h3>
+            <div class="badge">WebGL</div>
+            <p>Action prototype developed in Unity for browser play.</p>
+            <a href="#">Play Project</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="sila.jpg" alt="Sila">
+          <div class="card-content">
+            <h3>Sila</h3>
+            <div class="badge">WebGL</div>
+            <p>Experimental project focused on gameplay and mechanics.</p>
+            <a href="#">Play Project</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="car-game.jpg" alt="Car Game">
+          <div class="card-content">
+            <h3>Car Game</h3>
+            <div class="badge">WebGL</div>
+            <p>Racing prototype built in Unity for browser experience.</p>
+            <a href="#">Play Project</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2>About the Studio</h2>
+      <p class="section-text">
+        Charlotte Cat Games is an independent studio focused on creating games with Unity.
+        We develop 2D and 3D projects for Desktop, Android and WebGL, including prototypes,
+        commercial titles and online multiplayer experiences.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2>Technologies</h2>
+      <div class="tech-list">
+        <div class="tech-item">Unity</div>
+        <div class="tech-item">C#</div>
+        <div class="tech-item">Photon PUN2</div>
+        <div class="tech-item">Firebase</div>
+        <div class="tech-item">WebGL</div>
+        <div class="tech-item">Android</div>
+        <div class="tech-item">PC</div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2>Links</h2>
+      <div class="links-list">
+        <a class="link-item" href="https://store.steampowered.com/app/2248670/MARTIAN_CONQUER/" target="_blank">Steam</a>
+        <a class="link-item" href="https://play.google.com/store/apps/developer?id=Thiago+correia+de+Souza" target="_blank">Google Play</a>
+        <a class="link-item" href="https://charlottecatgames.itch.io/" target="_blank">itch.io</a>
+        <a class="link-item" href="https://github.com/thiagoSuza" target="_blank">GitHub</a>
+        <a class="link-item" href="https://youtube.com/@kittendevnotaunitytutorial?si=zNMJ9sAYom21O-N5" target="_blank">YouTube</a>
+        <a class="link-item" href="mailto:charlottecatgames@gmail.com">Contact</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>Contact: <a href="mailto:charlottecatgames@gmail.com">charlottecatgames@gmail.com</a></p>
+    </div>
+  </footer>
+
+</body>
+</html>
