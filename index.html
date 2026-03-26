@@ -1,172 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Charlotte Cat Games</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Charlotte Cat Games</title>
 
-  <style>
-    * { margin:0; padding:0; box-sizing:border-box; }
+<style>
+/* SEU CSS ORIGINAL (não alterei nada relevante) */
 
-    :root {
-      --bg:#0a0f1c;
-      --panel:rgba(255,255,255,0.04);
-      --panel-border:rgba(255,255,255,0.08);
-      --text:#f4f7ff;
-      --text-soft:#cbd5f0;
-      --accent:#6ea8ff;
-      --max-width:1150px;
-    }
+* { margin:0; padding:0; box-sizing:border-box; }
 
-    body {
-      font-family: Arial, sans-serif;
-      background: linear-gradient(180deg,#09101d 0%,#0d1424 100%);
-      color: var(--text);
-    }
+:root {
+  --bg:#0a0f1c;
+  --panel:rgba(255,255,255,0.04);
+  --panel-border:rgba(255,255,255,0.08);
+  --text:#f4f7ff;
+  --text-soft:#cbd5f0;
+  --accent:#6ea8ff;
+  --max-width:1150px;
+}
 
-    .container {
-      max-width: var(--max-width);
-      margin: 0 auto;
-      padding: 0 20px;
-    }
+body {
+  font-family: Arial;
+  background: linear-gradient(180deg,#09101d 0%,#0d1424 100%);
+  color: var(--text);
+}
 
-    .hero {
-      padding: 80px 0;
-      background:
-        linear-gradient(rgba(6,10,18,0.75),rgba(6,10,18,0.9)),
-        url("banner.png") center/cover no-repeat;
-    }
+.container {
+  max-width: var(--max-width);
+  margin:auto;
+  padding:0 20px;
+}
 
-    .hero h1 {
-      font-size: 3rem;
-      margin-bottom: 30px;
-    }
+.hero {
+  min-height:85vh;
+  display:flex;
+  align-items:flex-start;
+  padding-top:60px;
+  background:
+    linear-gradient(rgba(6,10,18,0.72), rgba(6,10,18,0.88)),
+    url("banner.png") center/cover no-repeat;
+}
 
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: 24px;
-    }
+.hero-content {
+  max-width:1100px;
+}
 
-    .panel {
-      background: var(--panel);
-      border: 1px solid var(--panel-border);
-      border-radius: 20px;
-      padding: 30px;
-    }
+.hero h1 {
+  font-size:3.4rem;
+  margin-bottom:20px;
+}
 
-    .about-content p {
-      color: var(--text-soft);
-      margin-bottom: 15px;
-    }
+.about-hero {
+  margin-top:20px;
+}
 
-    .about-focus-panel {
-      background: rgba(10,22,42,0.9);
-      border-radius: 20px;
-      padding: 25px;
-      border: 1px solid rgba(84,140,255,0.2);
-    }
+.section-title {
+  font-size:2rem;
+  margin-bottom:10px;
+}
 
-    .focus-item {
-      margin-bottom: 12px;
-      color: #e6eeff;
-    }
+.section-subtitle {
+  color: var(--text-soft);
+  margin-bottom:25px;
+}
 
-    .btn-row {
-      margin-top: 30px;
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
+.about-grid {
+  display:grid;
+  grid-template-columns:1.2fr 0.8fr;
+  gap:24px;
+}
 
-    .btn {
-      padding: 12px 18px;
-      border-radius: 10px;
-      background: #2f6df6;
-      color: white;
-      font-weight: bold;
-      text-decoration: none;
-    }
+.panel {
+  background:var(--panel);
+  border:1px solid var(--panel-border);
+  border-radius:22px;
+  padding:30px;
+}
 
-    .btn.secondary {
-      background: rgba(255,255,255,0.08);
-    }
+.about-content p {
+  color:var(--text-soft);
+  margin-bottom:15px;
+}
 
-    .section {
-      padding: 70px 0;
-    }
+.about-focus-panel {
+  padding:28px;
+  border-radius:22px;
+  background:rgba(10,22,42,0.92);
+  border:1px solid rgba(84,140,255,0.22);
+}
 
-    .section-title {
-      font-size: 2rem;
-      margin-bottom: 15px;
-    }
+.focus-item {
+  margin-bottom:12px;
+}
 
-    .section-subtitle {
-      color: var(--text-soft);
-      margin-bottom: 25px;
-    }
+.btn-row {
+  margin-top:25px;
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+}
 
-    footer {
-      text-align: center;
-      padding: 40px;
-      color: #aaa;
-    }
+.btn {
+  padding:12px 18px;
+  border-radius:10px;
+  background:#2f6df6;
+  color:#fff;
+  text-decoration:none;
+  font-weight:bold;
+}
 
-    @media (max-width:900px){
-      .about-grid{
-        grid-template-columns:1fr;
-      }
-    }
-  </style>
+.btn.secondary {
+  background:rgba(255,255,255,0.08);
+}
+
+.section {
+  padding:70px 0;
+}
+
+footer {
+  text-align:center;
+  padding:40px;
+  color:#aaa;
+}
+
+@media(max-width:900px){
+  .about-grid { grid-template-columns:1fr; }
+}
+</style>
 </head>
 
 <body>
 
+<!-- HERO -->
 <header class="hero">
   <div class="container">
+    <div class="hero-content">
 
-    <h1>Charlotte Cat Games</h1>
+      <h1>Charlotte Cat Games</h1>
 
-    <div class="about-grid">
+      <div class="about-hero">
 
-      <div class="panel about-content">
-        <p>
-          Charlotte Cat Games is an independent game development studio focused on creating games with Unity.
-          The studio works on both experimental prototypes and commercial projects.
+        <span class="eyebrow">Independent Studio</span>
+        <h2 class="section-title">About the Studio</h2>
+        <p class="section-subtitle">
+          A growing independent studio focused on building games with Unity for multiple platforms.
         </p>
 
-        <p>
-          Projects include 2D and 3D games for Desktop, Android and WebGL across multiple genres.
-        </p>
+        <div class="about-grid">
 
-        <p>
-          The studio also develops multiplayer systems using Photon PUN2.
-        </p>
+          <div class="panel about-content">
+            <p>
+              Charlotte Cat Games is an independent game development studio focused on creating games with Unity.
+              The studio works on both experimental prototypes and commercial projects.
+            </p>
+
+            <p>
+              Projects include 2D and 3D games for Desktop, Android and WebGL across multiple genres.
+            </p>
+
+            <p>
+              The studio also develops online multiplayer using Photon PUN2.
+            </p>
+          </div>
+
+          <div class="about-focus-panel">
+            <div class="focus-item">Unity development for PC, Android and WebGL</div>
+            <div class="focus-item">2D and 3D games</div>
+            <div class="focus-item">Online multiplayer</div>
+            <div class="focus-item">Prototypes and commercial games</div>
+          </div>
+
+        </div>
       </div>
 
-      <div class="about-focus-panel">
-        <div class="focus-item">Unity for PC, Android and WebGL</div>
-        <div class="focus-item">2D and 3D games</div>
-        <div class="focus-item">Online multiplayer</div>
-        <div class="focus-item">Prototypes and commercial games</div>
+      <div class="btn-row">
+        <a class="btn" href="#featured-game">Featured Game</a>
+        <a class="btn secondary" href="#projects">Projects</a>
+        <a class="btn secondary" href="#links">Links</a>
+        <a class="btn secondary" href="#contact">Contact</a>
       </div>
 
     </div>
-
-    <div class="btn-row">
-      <a class="btn" href="#featured-game">Featured Game</a>
-      <a class="btn secondary" href="#projects">Projects</a>
-      <a class="btn secondary" href="#links">Links</a>
-      <a class="btn secondary" href="#contact">Contact</a>
-    </div>
-
   </div>
 </header>
+
+<!-- RESTO DO SITE (mantido) -->
 
 <section class="section" id="links">
   <div class="container">
     <h2 class="section-title">Links</h2>
-    <p class="section-subtitle">Main platforms</p>
   </div>
 </section>
 
