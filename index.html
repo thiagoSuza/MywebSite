@@ -6,7 +6,7 @@
   <title>Charlotte Cat Games</title>
   <meta
     name="description"
-    content="Charlotte Cat Games is an independent Unity game development studio creating 2D and 3D games for PC, Android and WebGL."
+    content="Charlotte Cat Games is an independent Unity game development studio creating 2D and 3D games for PC, Android and mobile."
   />
 
   <style>
@@ -572,6 +572,12 @@
       gap: 24px;
     }
 
+    .mobile-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
     .project-card {
       background: linear-gradient(180deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.03) 100%);
       border: 1px solid rgba(255, 255, 255, 0.08);
@@ -602,7 +608,18 @@
       transition: transform 0.35s ease;
     }
 
-    .project-card:hover .project-thumb {
+    .mobile-thumb {
+      width: 100%;
+      height: 420px;
+      object-fit: cover;
+      object-position: top center;
+      background: #18233d;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      transition: transform 0.35s ease;
+    }
+
+    .project-card:hover .project-thumb,
+    .project-card:hover .mobile-thumb {
       transform: scale(1.04);
     }
 
@@ -806,6 +823,10 @@
         grid-template-columns: repeat(2, 1fr);
       }
 
+      .mobile-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
       .hero-grid,
       .about-grid,
       .featured-grid,
@@ -840,7 +861,8 @@
 
       .about-points,
       .featured-info-grid,
-      .mini-stats {
+      .mini-stats,
+      .mobile-grid {
         grid-template-columns: 1fr;
       }
 
@@ -889,12 +911,17 @@
       }
 
       .projects-grid,
-      .links-list {
+      .links-list,
+      .mobile-grid {
         grid-template-columns: 1fr;
       }
 
       .project-thumb {
         height: 220px;
+      }
+
+      .mobile-thumb {
+        height: 360px;
       }
 
       .nav {
@@ -921,6 +948,7 @@
           <a href="#about">About</a>
           <a href="#featured-game">Featured Game</a>
           <a href="#projects">Projects</a>
+          <a href="#mobile-games">Mobile Games</a>
           <a href="#links">Links</a>
           <a href="#contact">Contact</a>
         </nav>
@@ -936,24 +964,24 @@
 
           <h1>Games with identity, polish and solid gameplay systems</h1>
 
-          <p class="studio-type">Independent studio focused on 2D and 3D projects for PC, Android and WebGL</p>
+          <p class="studio-type">Independent studio focused on 2D and 3D projects for PC, Android and mobile</p>
 
           <p class="hero-text">
-            Charlotte Cat Games creates game prototypes, multiplayer projects and commercial releases with Unity,
+            Charlotte Cat Games creates original projects, mobile releases, multiplayer experiences and commercial games with Unity,
             combining gameplay clarity, technical structure and a strong indie development mindset.
           </p>
 
           <div class="hero-highlights">
             <div class="hero-highlight">Unity and C#</div>
             <div class="hero-highlight">Photon PUN2 Multiplayer</div>
-            <div class="hero-highlight">PC Android and WebGL</div>
-            <div class="hero-highlight">Prototypes and Published Games</div>
+            <div class="hero-highlight">PC Android and Mobile</div>
+            <div class="hero-highlight">Original Games and Commercial Projects</div>
           </div>
 
           <div class="btn-row">
             <a class="btn" href="#featured-game">See Featured Game</a>
             <a class="btn secondary" href="#projects">Explore Projects</a>
-            <a class="btn secondary" href="#links">Studio Links</a>
+            <a class="btn secondary" href="#mobile-games">Mobile Games</a>
             <a class="btn secondary" href="#contact">Contact</a>
           </div>
         </div>
@@ -961,8 +989,8 @@
         <aside class="hero-side-card">
           <h3>What the studio builds</h3>
           <p>
-            From experimental ideas to playable releases, the focus is on delivering games that feel fun,
-            readable and technically well executed.
+            From original ideas to published releases and commercial productions, the focus is on delivering games
+            that feel fun, readable and technically well executed.
           </p>
 
           <div class="mini-stats">
@@ -978,7 +1006,7 @@
 
             <div class="mini-stat">
               <strong>Cross platform</strong>
-              <span>Desktop Android and browser builds</span>
+              <span>Desktop Android and mobile releases</span>
             </div>
 
             <div class="mini-stat">
@@ -997,19 +1025,19 @@
       <h2 class="section-title">A small studio building games with real development focus</h2>
       <p class="section-subtitle">
         Charlotte Cat Games is an independent studio centered on Unity development, creating projects that range
-        from quick gameplay experiments to more complete and commercial productions.
+        from quick gameplay experiments to more complete commercial productions and mobile releases.
       </p>
 
       <div class="about-grid">
         <div class="panel about-content">
           <p>
-            The studio works with Unity to create 2D and 3D experiences for PC, Android and WebGL.
+            The studio works with Unity to create 2D and 3D experiences for PC, Android and mobile.
             The goal is not only to make games look good, but also to make them feel clear, responsive and enjoyable to play.
           </p>
 
           <p>
-            Projects include prototypes, arcade concepts, strategy ideas, racing experiments, educational games
-            and online multiplayer systems. Each project is treated as a chance to improve design, structure and player experience.
+            Projects include prototypes, arcade concepts, strategy ideas, racing experiments, educational games,
+            mobile releases and online multiplayer systems. Each project is treated as a chance to improve design, structure and player experience.
           </p>
 
           <p>
@@ -1044,7 +1072,7 @@
             <div class="tech-badge">C#</div>
             <div class="tech-badge">Photon PUN2</div>
             <div class="tech-badge">Firebase</div>
-            <div class="tech-badge">WebGL</div>
+            <div class="tech-badge">Mobile</div>
             <div class="tech-badge">Android</div>
             <div class="tech-badge">PC</div>
           </div>
@@ -1071,7 +1099,7 @@
 
             <div class="focus-item">
               <div class="focus-icon">04</div>
-              <span>Commercial projects, public releases and portfolio ready game experiences</span>
+              <span>Original releases, mobile publishing and commercial game production</span>
             </div>
           </div>
         </div>
@@ -1084,7 +1112,7 @@
       <span class="eyebrow">Featured Release</span>
       <h2 class="section-title">A stronger spotlight on the main commercial project</h2>
       <p class="section-subtitle">
-        This section gives more weight to the studio main release and helps the portfolio feel more focused and memorable.
+        This section gives more weight to the studio main release and helps the website feel more focused and memorable.
       </p>
 
       <div class="featured-grid">
@@ -1249,12 +1277,78 @@
     </div>
   </section>
 
+ <section class="section projects-section" id="mobile-games">
+  <div class="container">
+    <div class="projects-header">
+      <div>
+        <span class="eyebrow">Mobile Games</span>
+        <h2 class="section-title">Published mobile games available on Google Play</h2>
+        <p class="section-subtitle">
+          A selection of mobile titles released by Charlotte Cat Games, focused on accessible gameplay, fast sessions and polished arcade style experiences.
+        </p>
+      </div>
+    </div>
+
+    <div class="mobile-grid">
+      <article class="project-card">
+        <div class="project-thumb-wrap">
+          <img class="mobile-thumb" src="CharlotteCrossing.png" alt="Charlotte Crossing">
+          <div class="project-overlay">
+            <span>Mobile</span>
+            <span>Casual</span>
+          </div>
+        </div>
+
+        <div class="project-content">
+          <div class="project-meta">Google Play</div>
+          <h3>Charlotte Crossing</h3>
+          <p>
+            Charlotte Crossing is a simple and addictive casual game where precision and timing are everything.
+            You control Charlotte, a cute little cat who walks forward automatically across platforms. When she reaches the edge,
+            she stops and waits for your action. Hold the screen to make a stick grow and release to create a bridge.
+            The goal is to make the bridge exactly the right length to reach the next platform.
+          </p>
+
+          <div class="btn-row">
+            <a class="btn secondary small" href="https://play.google.com/store/apps/details?id=com.CharlotteCatGames.CharlotteCrossing&pcampaignid=web_share" target="_blank">Download on Google Play</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-thumb-wrap">
+          <img class="mobile-thumb" src="BBC.png" alt="Color the Brick Battle">
+          <div class="project-overlay">
+            <span>Arcade</span>
+            <span>Mobile</span>
+          </div>
+        </div>
+
+        <div class="project-content">
+          <div class="project-meta">Google Play</div>
+          <h3>Color the Brick Battle</h3>
+          <p>
+            Color the Brick Battle is a fast and addictive brick breaker game where color is the key to victory.
+            Control the paddle, bounce the ball and destroy bricks by matching their colors. The ball starts white,
+            but it changes color when it touches the colored side of the paddle. Only bricks with the same color can be destroyed,
+            so precision and positioning are essential. Test your reflexes and strategy in a classic arcade experience with a colorful twist.
+          </p>
+
+          <div class="btn-row">
+            <a class="btn secondary small" href="https://play.google.com/store/apps/details?id=com.CharlotteCatGames.BrickColorBattle&pcampaignid=web_share" target="_blank">Download on Google Play</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
   <section class="section links-section" id="links">
     <div class="container">
       <span class="eyebrow">Studio Links</span>
       <h2 class="section-title">Main platforms and contact points</h2>
       <p class="section-subtitle">
-        Centralized access to the studio public pages, releases, prototypes, repositories and direct contact.
+        Centralized access to the studio public pages, releases, prototypes and direct contact.
       </p>
 
       <div class="links-panel">
@@ -1277,12 +1371,6 @@
             <span>Experimental games, browser builds and prototypes</span>
           </a>
 
-          <a class="link-card" href="https://github.com/thiagoSuza" target="_blank">
-            <div class="link-icon">Code</div>
-            <strong>GitHub</strong>
-            <span>Repositories, technical samples and public code</span>
-          </a>
-
           <a class="link-card" href="https://youtube.com/@kittendevnotaunitytutorial?si=zNMJ9sAYom21O-N5" target="_blank">
             <div class="link-icon">Video</div>
             <strong>YouTube</strong>
@@ -1292,7 +1380,7 @@
           <a class="link-card" href="mailto:charlottecatgames@gmail.com">
             <div class="link-icon">Mail</div>
             <strong>Email</strong>
-            <span>Direct contact for freelance work, business and partnerships</span>
+            <span>Direct contact for business, partnerships and freelance projects</span>
           </a>
         </div>
       </div>
